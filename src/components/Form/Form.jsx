@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../lang/Lang";
 import "./Form.scss";
-import logo from "/twitter-logo-4 1.png"
+import logo from "/twitter-logo-4 1.png";
 
 export default function Form() {
   const { language, languages, strings, changeLanguage } =
@@ -40,13 +40,11 @@ export default function Form() {
               placeholder={strings.form["placeholder-name"]}
             />
             <input
-              type="text"
+              type="number"
               className="input"
               placeholder={strings.form["placeholder-phone"]}
             />
-            <h3 className="link-email">
-              {strings?.form.href}
-            </h3>
+            <h3 className="link-email">{strings?.form.href}</h3>
             <h3 className="date">{strings.form.date}</h3>
             <p className="info-form">{strings.form.info}</p>
             <div className="select-box">
@@ -109,9 +107,11 @@ export default function Form() {
                 className="input-date"
               />
             </div>
-            <button type="button" className="btn-next">
-              {strings.form.btn}
-            </button>
+            <div className="btn-box">
+              <button type="button" className="btn-next">
+                {strings.form.btn}
+              </button>
+            </div>
           </form>
         </div>
       </main>
