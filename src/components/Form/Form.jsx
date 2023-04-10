@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../lang/Lang";
 import "./Form.scss";
+import logo from "/twitter-logo-4 1.png"
 
 export default function Form() {
   const { language, languages, strings, changeLanguage } =
@@ -12,7 +13,7 @@ export default function Form() {
           <div className="header">
             <h1 className="logo">
               <a href="#">
-                <img src="../../public/twitter-logo-4 1.png" alt="" />
+                <img src={logo} alt="logo" />
               </a>
             </h1>
             <div className="dropdown">
@@ -43,9 +44,9 @@ export default function Form() {
               className="input"
               placeholder={strings.form["placeholder-phone"]}
             />
-            <a href="#" className="link-email">
+            <h3 className="link-email">
               {strings?.form.href}
-            </a>
+            </h3>
             <h3 className="date">{strings.form.date}</h3>
             <p className="info-form">{strings.form.info}</p>
             <div className="select-box">
